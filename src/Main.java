@@ -1,5 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("Задание 1.");
+        Author Bulgakov = new Author("Михаил", "Булгаков");
+        Author Dostoevskiy = new Author("Федор", "Достоевский");
+        Book masterAndMargaritha = new Book("Мастер и Маргарита",Bulgakov ,1940);
+        Book brothersKaramazovs = new Book("Братья Карамазовы", Dostoevskiy , 1880);
+//        System.out.println(masterAndMargaritha.getNameOfBook());
+//        System.out.println(masterAndMargaritha.getYearOfPublication());
+//        System.out.println(Bulgakov.getName()+"  "+ Bulgakov.getSurname());
+
+         masterAndMargaritha.setYearOfPublication(1955);
+        System.out.println("masterAndMargaritha.getYearOfPublication() = " + masterAndMargaritha.getYearOfPublication());
+
+
     }
 }
