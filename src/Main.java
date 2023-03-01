@@ -12,6 +12,16 @@ public class Main {
          masterAndMargaritha.setYearOfPublication(1955);
         System.out.println("masterAndMargaritha.getYearOfPublication() = " + masterAndMargaritha.getYearOfPublication());
 
+        System.out.println("Проверка метода to String");
+            System.out.println( Bulgakov.toString());
+            System.out.println( masterAndMargaritha.toString());
+        System.out.println("Проверка метода equals");
+            Author Tolstoy = new Author("Лев", "Толстой");
+            Author Tolstoy1 = new Author("Лев", "Толстой");
+            System.out.println(Tolstoy1.equals(Tolstoy));
+
+        Book brothersKaramazovs1 = new Book("Братья вКарамазовы", Dostoevskiy , 1880);
+        System.out.println(brothersKaramazovs1.equals(brothersKaramazovs));
 
     }
 }

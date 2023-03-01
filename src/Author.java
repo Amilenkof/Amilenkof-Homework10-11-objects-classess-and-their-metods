@@ -1,26 +1,42 @@
+import java.security.PublicKey;
+import java.util.Objects;
+
 public class Author {
     private String name;
-   private String surname;
+    private String surname;
 
     public Author(String name, String surname) {
         this.name = name;
         this.surname = surname;
-
-
     }
 
     public String getName() {
         return name;
     }
-//    public void setName () {
-//        this.name = name;
-//    }
 
-    public String getSurname (){
+    public String getSurname() {
         return surname;
     }
-//    public  void setSurname ( ) {
-//        this.surname = surname;
-//    }
 
+
+    @Override
+    public String toString() {
+        return "Имя "+name + " ,Фамилия " + surname;}
+
+    @Override
+    public boolean equals (Object obt) {
+        if (this.getClass()!=obt.getClass()) {
+            return false;
+        } else  {
+            Author obtauthor =(Author) obt;
+            return this.name == obtauthor.name && this.surname == obtauthor.surname;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname);
+    }
 }
+
+
