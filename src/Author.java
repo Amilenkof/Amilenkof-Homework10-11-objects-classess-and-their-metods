@@ -21,14 +21,15 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Имя "+name + " ,Фамилия " + surname;}
+        return "Имя " + name + " ,Фамилия " + surname;
+    }
 
     @Override
-    public boolean equals (Object obt) {
-        if (this.getClass()!=obt.getClass()) {
+    public boolean equals(Object obt) {
+        if (this.getClass() != obt.getClass()) {
             return false;
-        } else  {
-            Author obtauthor =(Author) obt;
+        } else {
+            Author obtauthor = (Author) obt;
             return this.name == obtauthor.name && this.surname == obtauthor.surname;
         }
     }
