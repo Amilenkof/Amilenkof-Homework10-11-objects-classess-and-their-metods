@@ -22,6 +22,8 @@ public class Main {
 
         Book brothersKaramazovs1 = new Book("Братья вКарамазовы", Dostoevskiy, 1880);
         System.out.println(brothersKaramazovs1.equals(brothersKaramazovs));
+        Author nullAuthor = new Author(null, null);
+        System.out.println(nullAuthor.equals(Bulgakov));
 
     }
 }

@@ -40,7 +40,7 @@ public class Book {
 
     @Override
     public boolean equals(Object obt) {
-        if (this.getClass() != obt.getClass()) {
+        if (obt.getClass() == null || this.getClass() != obt.getClass()) {
             return false;
         }
         Book obtBook = (Book) obt;
@@ -51,5 +51,7 @@ public class Book {
     public int hashCode() {
         return Objects.hash(nameOfBook, author, yearOfPublication);
     }
+
+
 }
 
