@@ -25,13 +25,11 @@ public class Author {
     }
 
     @Override
-    public boolean equals(Object obt) {
-        if (obt.getClass() == null || this.getClass() != obt.getClass()) {
-            return false;
-        } else {
-            Author obtauthor = (Author) obt;
-            return this.name == obtauthor.name && this.surname == obtauthor.surname;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return name.equals(author.name) && surname.equals(author.surname);
     }
 
     @Override
@@ -39,5 +37,6 @@ public class Author {
         return Objects.hash(name, surname);
     }
 }
+
 
 

@@ -15,16 +15,12 @@ public class Book {
         return nameOfBook;
     }
 
-    //    public void setNameOfBook () {
-//        this.nameOfBook = nameOfBook;
-//    }
+
     public Author getAuthor() {
         return author;
     }
 
-    //    public void setAuthor () {
-//        this.author = author;
-//    }
+
     public int getYearOfPublication() {
         return yearOfPublication;
     }
@@ -39,19 +35,16 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object obt) {
-        if (obt.getClass() == null || this.getClass() != obt.getClass()) {
-            return false;
-        }
-        Book obtBook = (Book) obt;
-        return this.nameOfBook == obtBook.nameOfBook && this.author == obtBook.author && this.yearOfPublication == obtBook.yearOfPublication;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearOfPublication == book.yearOfPublication && nameOfBook.equals(book.nameOfBook) && author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(nameOfBook, author, yearOfPublication);
     }
-
-
 }
 
